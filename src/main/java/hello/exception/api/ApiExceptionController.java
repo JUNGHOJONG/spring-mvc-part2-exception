@@ -18,6 +18,10 @@ public class ApiExceptionController {
             throw new RuntimeException("잘못된 정보입니다");
         }
 
+        if (id.equals("bad")) {
+            throw new IllegalArgumentException("잘못 입력된 값");
+        }
+
         return new MemberDto(id, "name = " + id);
     }
 
